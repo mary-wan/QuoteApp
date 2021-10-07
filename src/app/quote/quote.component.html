@@ -3,7 +3,8 @@
         <div class="col-md-5">
             <app-form (addQuote)= "addNewQuote($event)"></app-form>
         </div>
-        <div class="cardHolder col-md-6">
+        <div class="col md-2"></div>
+        <div class="cardHolder col-md-5">
             <div class="card text-center mt-4" *ngFor="let quote of quotes let i = index">
               <div class="card-header">
                 <h6 id={{i}}>Posted by:{{quote.name}}</h6>
@@ -17,13 +18,5 @@
               </div>
             </div>
           </div>
-        <!-- <div class="col-md-6 mt-3">
-            <div>
-                <ul *ngFor= "let quote of quotes let i = index">
-                    <li>{{quote.author}}: {{quote.quoteDescribe}}</li>
-                    <app-quote-detail [quote]="quote"></app-quote-detail>
-                </ul>
-            </div>
-        </div> -->
     </div>
 </div>

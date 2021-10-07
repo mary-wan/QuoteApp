@@ -1,6 +1,6 @@
 .quotation{
     color: blue;
 }
-.icons{
-    justify-content: space-between;
+.like,.dislike{
+    padding-right: 15%;
 }
