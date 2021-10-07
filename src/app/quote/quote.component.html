@@ -1,22 +1,24 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-5">
-            <app-form (addQuote)= "addNewQuote($event)"></app-form>
-        </div>
-        <div class="col md-2"></div>
-        <div class="cardHolder col-md-5">
-            <div class="card text-center mt-4" *ngFor="let quote of quotes let i = index">
-              <div class="card-header">
-                <h6 id={{i}}>Posted by:{{quote.name}}</h6>
-              </div>
-              <div class="card-body">
-                <app-quote-detail [quote]="quote"></app-quote-detail>
-              </div>
-              <div class="card-footer text-muted">
-               Posted: {{quote.date|date|uppercase}} <br>
-                {{quote.date|dateCount}}
-              </div>
-            </div>
-          </div>
+  <div class="row">
+    <div class="col-md-5">
+      <app-form (addQuote)="addNewQuote($event)"></app-form>
     </div>
+    <div class="col md-2"></div>
+    <div class="cardHolder col-md-5">
+      <div class="card text-center mt-4" *ngFor="let quote of quotes let i = index">
+        <div class="card-header">
+          <h6 id={{i}}>Posted by:{{quote.name}}</h6>
+        </div>
+        <div class="card-body">
+          <app-quote-detail [quote]="quote"></app-quote-detail>
+        </div>
+        <!-- <button class="btn btn-success btn-sm">SEE MORE</button> -->
+        <div class="card-footer text-muted">
+          Posted: {{quote.date|date|uppercase}} <br>
+          {{quote.date|dateCount}}
+        </div>
+      </div>
+      <p *ngIf='quotes.length <1' class="alert alert-warning">OOOPS! No Quotes Available</p>
+    </div>
+  </div>
 </div>
