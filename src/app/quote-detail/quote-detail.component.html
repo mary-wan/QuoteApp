@@ -1,5 +1,6 @@
 <p><i class="fa fa-quote-left quotation"></i> {{quote.quoteDescribe}} <i class="fa fa-quote-right quotation"></i></p>
 <p>------- {{quote.author}} -------</p>
+<p>{{quote.upvotes}}</p>
 
 <div class="icons mt-4 mb-1">
     <span style="font-size: 1em; color: green;" class="like" (click)="upVote()">
@@ -11,5 +12,6 @@
       <span style="font-size: 1em; color: darkred;" class="delete" (click)= "deleteQuote(true)">
         <i class="fa fa-trash" aria-hidden="true"></i>
       </span>
+
 </div>
 

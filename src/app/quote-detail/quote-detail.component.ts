@@ -17,6 +17,7 @@ export class QuoteDetailComponent implements OnInit {
 
   upVote(){
     this.upvotes = this.upvotes + 1;
+    
   }
 
   downVote(){
