@@ -10,6 +10,7 @@ import { DateCountPipe } from './date-count.pipe';
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
 import { HighestVoteDirective } from './highest-vote.directive';
+import { DisplayQuoteComponent } from './display-quote/display-quote.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HighestVoteDirective } from './highest-vote.directive';
     QuoteDetailComponent,
     DateCountPipe,
     FormComponent,
-    HighestVoteDirective
+    HighestVoteDirective,
+    DisplayQuoteComponent
   ],
   imports: [
     BrowserModule,
