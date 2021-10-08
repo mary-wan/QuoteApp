@@ -6,15 +6,15 @@
     <div class="col md-2"></div>
     <div class="cardHolder col-md-5">
       <div class="card text-center mt-4" *ngFor="let quote of quotes let i = index">
-        <div class="card-header">
+        <!-- <div class="card-header">
           <h6 id={{i}}>Posted by:{{quote.name}}</h6>
-        </div>
+        </div> -->
         <div class="card-body">
-          <app-quote-detail [quote]="quote"></app-quote-detail>
+          <app-quote-detail [quote]="quote" (isDelete)= "quoteDelete($event,i)"></app-quote-detail>
         </div>
         <!-- <button class="btn btn-success btn-sm">SEE MORE</button> -->
         <div class="card-footer text-muted">
-          Posted: {{quote.date|date|uppercase}} <br>
+          Posted by: {{quote.name}} on {{quote.date|date|uppercase}} <br>
           {{quote.date|dateCount}}
         </div>
       </div>

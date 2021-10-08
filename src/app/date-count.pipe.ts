@@ -7,7 +7,9 @@ import { TimeAgoPipe } from 'time-ago-pipe';
 })
 export class DateCountPipe extends TimeAgoPipe {
 
-  transform(value: any): string {
+  transform(value: any): any {
     return super.transform(value);
-  }
+
+
+  }  
 }

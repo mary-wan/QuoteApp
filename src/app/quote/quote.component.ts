@@ -20,6 +20,14 @@ export class QuoteComponent implements OnInit {
     quote.date = new Date(quote.date);
     this.quotes.unshift(quote);
   }
+  quoteDelete(isDelete:boolean, index:number){
+    if(isDelete){
+      let confirmDelete = confirm (`Are you sure you want to delete ${this.quotes[index].author} quote? ` );
+      if (confirmDelete){
+        this.quotes.splice(index,1);
+    }
+    }
+  }
 
   ngOnInit(): void {
   }
