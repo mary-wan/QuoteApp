@@ -14,6 +14,7 @@ export class QuoteDetailComponent implements OnInit {
   @Output() isDelete = new EventEmitter<boolean>();
   @Output() isUpvote = new EventEmitter<boolean>();
   @Output() isDownvote = new EventEmitter<boolean>();
+  @Output() highest = new EventEmitter();
 
 
   upVote(upvoted:boolean){
@@ -25,6 +26,9 @@ export class QuoteDetailComponent implements OnInit {
   }
   deleteQuote(deleted:boolean){
     this.isDelete.emit(deleted);
+  }
+  highestUpvotedQuote(){
+    this.highest.emit();
   }
 
   ngOnInit(): void {

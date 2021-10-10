@@ -7,7 +7,8 @@
     <div class="cardHolder col-md-5">
       <div class="card text-center mt-4" *ngFor="let quote of quotes let i = index">
         <div class="card-body">
-          <app-quote-detail [quote]="quote" (isDelete)= "quoteDelete($event,i)" (isUpvote)="quoteUpvote($event,i)" (isDownvote)="quoteDownvote($event,i)"></app-quote-detail>
+          <app-quote-detail [quote]="quote" (isDelete)= "quoteDelete($event,i)" (isUpvote)="quoteUpvote($event,i)" (isDownvote)="quoteDownvote($event,i)" (highest)="highestUpvote()"></app-quote-detail>
+          <p class="btn btn-success btn-sm text-green mt-3" *ngIf='i == highestQuote && quote.upvotes > 0;'>Voted Best</p> <!-- Displayed only for the quote with the highestVote -->
         </div>
         <div class="card-footer text-muted">
           <app-display-quote [quote]="quote"></app-display-quote>
