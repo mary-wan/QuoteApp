@@ -4,11 +4,15 @@
       <app-form (addQuote)="addNewQuote($event)"></app-form>
     </div>
     <div class="col md-3"></div>
-    <div class="cardHolder col-md-4">
+    <div class="cardHolder col-md-4" >
       <div class="card text-center mt-4" *ngFor="let quote of quotes let i = index">
-        <div class="card-body">
+        <div class="card-body" *ngIf="i ==favQuote && quote.upvotes > 0;"appHighestVote>
           <app-quote-detail [quote]="quote" (isDelete)= "quoteDelete($event,i)" (isUpvote)="quoteUpvote($event,i)" (isDownvote)="quoteDownvote($event,i)" (highest)="highestUpvote()"></app-quote-detail>
-          <p class="btn btn-success btn-sm text-green mt-3" *ngIf="i ==favQuote && quote.upvotes > 0;">Voted Best</p> 
+          <p class="btn btn-success btn-sm mt-3" *ngIf="i ==favQuote && quote.upvotes > 0;">MOST UPVOTED</p> 
+        </div>
+        <div class="card-body" *ngIf="i !=favQuote" >
+          <app-quote-detail [quote]="quote" (isDelete)= "quoteDelete($event,i)" (isUpvote)="quoteUpvote($event,i)" (isDownvote)="quoteDownvote($event,i)" (highest)="highestUpvote()"></app-quote-detail>
+          <!-- <p class="btn text-white mt-3" *ngIf="i ==favQuote && quote.upvotes > 0;"appHighestVote>MOST UPVOTED</p>  -->
         </div>
         <div class="card-footer text-muted">
           <app-display-quote [quote]="quote"></app-display-quote>
