@@ -1,5 +1,6 @@
 import { Quote } from './../quote';
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-quote-detail',
@@ -11,17 +12,16 @@ export class QuoteDetailComponent implements OnInit {
   constructor() { }
   @Input() quote!: Quote;
   @Output() isDelete = new EventEmitter<boolean>();
+  @Output() isUpvote = new EventEmitter<boolean>();
+  @Output() isDownvote = new EventEmitter<boolean>();
 
-  upvotes = 0;
-  downvotes = 0;
 
-  upVote(){
-    this.upvotes = this.upvotes + 1;
-    
+  upVote(upvoted:boolean){
+    this.isUpvote.emit(upvoted);
   }
 
-  downVote(){
-    this.downvotes = this.downvotes + 1;
+  downVote(downvoted:boolean){
+    this.isDownvote.emit(downvoted);
   }
   deleteQuote(deleted:boolean){
     this.isDelete.emit(deleted);

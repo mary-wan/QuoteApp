@@ -7,12 +7,11 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-
   constructor() { }
 
   quotes: Quote[]= [
-    new Quote (0,"Kiki ","Napoleon Hill","If you cannot do great things, do small things in a great way.",2,new Date(2019,4,3)),
-    new Quote (1,"Mary Njenga","Eleanor Roosevelt","The future belongs to those who believe in the beauty of their dreams.",1,new Date(2016,6,5))
+    new Quote (0,"Kiki ","Napoleon Hill","If you cannot do great things, do small things in a great way.",1,0,new Date(2019,4,3)),
+    new Quote (1,"Mary Njenga","Eleanor Roosevelt","The future belongs to those who believe in the beauty of their dreams.",0,0,new Date(2016,6,5))
   ]
   addNewQuote(quote: Quote){
     let quoteLength = this.quotes.length;
@@ -26,6 +25,16 @@ export class QuoteComponent implements OnInit {
       if (confirmDelete){
         this.quotes.splice(index,1);
     }
+    }
+  }
+  quoteUpvote(isUpvote:boolean,index:number){
+    if(isUpvote){
+      this.quotes[index].upvotes +=1;
+    }
+  }
+  quoteDownvote(isDownvote:boolean,index:number){
+    if(isDownvote){
+      this.quotes[index].downvotes +=1;
     }
   }
 
