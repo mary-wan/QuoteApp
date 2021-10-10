@@ -8,7 +8,7 @@
 + [Installation Requirement](#Installation)
 + [Technology Used](#technology-used)
 + [Licence](#licence)
-+ [Authors Info](#author-Info)
++ [Authors Info](#authors-info)
 ## Description
  This is a quotes application that enables users to post their own quotes, view quotes and vote for their favorite quote. The most upvoted quote is highlighted.
 ****
@@ -44,7 +44,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ### Live link
  Click on the link to view the site.https://mary-wan.github.io/QuoteApp/
 ****
-[Go Back to the top](#maries-pizzainn)
+[Go Back to the top](#quote-app)
 ## Technology Used
 * Typescript
 * HTML 
@@ -52,7 +52,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 * Javascript 
 
 ****
-[Go Back to the top](#maries-pizzainn)
+[Go Back to the top](#quote-app)
 ## Licence
 MIT License
 
@@ -78,9 +78,9 @@ SOFTWARE.
 
 
 ****
-[Go Back to the top](#maries-pizzainn)
+[Go Back to the top](#quote-app)
 ## Authors Info
 * Slack Profile - [Mary Njenga](https://app.slack.com/client/T077KKCG6/GLRQR61NW/user_profile/U027VKL1WLT?cdn_fallback=1)
 * Email - [Mary Njenga](mary.njenga@student.moringaschool.com)
 
-[Go Back to the top](#maries-pizzainn)
+[Go Back to the top](#quote-app)
