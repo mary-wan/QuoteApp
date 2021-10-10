@@ -42,7 +42,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ****
 
 ### Live link
- Click on the link to view the site.`https://mary-wan.github.io/QuoteApp/`
+ Click ![here]("https://mary-wan.github.io/QuoteApp/") to view the live link
 ****
 [Go Back to the top](#quote-app)
 ## Technology Used
