@@ -8,8 +8,8 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   constructor() { }
-  highVote: number = 0; // Starts at Zero for Every Posted Quote
-  favQuote:number = 0;
+  highVote: number = 0; 
+  mostUpvote:number = 0;
   
   quotes: Quote[]= [
     new Quote (0,"Kiki ","Napoleon Hill","If you cannot do great things, do small things in a great way.",1,0,new Date(2019,4,3)),
@@ -40,10 +40,10 @@ export class QuoteComponent implements OnInit {
     }
   }
   highestUpvote(){
-    for (var i = 0; i < this.quotes.length; i++) { // Loop through Current Posted quotes
-       if (this.quotes[i].upvotes > this.highVote) { // If noOfVotes for current looped quote is higher than the current highestVotes
-          this.highVote = this.quotes[i].upvotes; // Assign the new noOfVotes value to highestVotes
-          this.favQuote = i; // Take the index of the quote with the highest noOfVotes and assign its index to highestQuote
+    for (var i = 0; i < this.quotes.length; i++) { //loops through the quotes array and returns the index to the most upvoted quote
+       if (this.quotes[i].upvotes > this.highVote) { 
+          this.highVote = this.quotes[i].upvotes; 
+          this.mostUpvote = i;
        }
        
     }
