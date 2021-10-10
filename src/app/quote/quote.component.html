@@ -10,7 +10,7 @@
           <app-quote-detail [quote]="quote" (isDelete)= "quoteDelete($event,i)" (isUpvote)="quoteUpvote($event,i)" (isDownvote)="quoteDownvote($event,i)" (highest)="highestUpvote()"></app-quote-detail>
           <p class="btn btn-success btn-sm mt-2" *ngIf="i ==mostUpvote && quote.upvotes > 0;">MOST UPVOTED</p> 
         </div>
-        <div class="card-body" *ngIf="i !=mostUpvote" >
+        <div class="card-body" *ngIf="i !=mostUpvote ||quote.upvotes == 0" >
           <app-quote-detail [quote]="quote" (isDelete)= "quoteDelete($event,i)" (isUpvote)="quoteUpvote($event,i)" (isDownvote)="quoteDownvote($event,i)" (highest)="highestUpvote()"></app-quote-detail>
         </div>
         <div class="card-footer text-muted">
