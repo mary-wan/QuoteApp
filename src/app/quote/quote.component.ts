@@ -12,7 +12,7 @@ export class QuoteComponent implements OnInit {
   mostUpvote:number = 0;
   
   quotes: Quote[]= [
-    new Quote (0,"Kiki ","Napoleon Hill","If you cannot do great things, do small things in a great way.",1,0,new Date(2019,4,3)),
+    new Quote (0,"Kiki ","Napoleon Hill","If you cannot do great things, do small things in a great way.",0,0,new Date(2019,4,3)),
     // new Quote (1,"Mary Njenga","Eleanor Roosevelt","The future belongs to those who believe in the beauty of their dreams.",0,0,new Date(2016,6,5))
   ]
   addNewQuote(quote: Quote){
