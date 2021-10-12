@@ -2,13 +2,23 @@ form{
     background-image: url("src/assets/form.jpg");
     background-attachment: fixed;
     background-size: cover;  
-  
+    /* background-color: #CFEED1; */
+    border:  solid 2px;
+    border-radius: 10px;
 }
 .form-group{
     width: 80%;
     margin-left: 10%;
 }
 .btn{
-    margin-left: 30%;
+    margin-left: 25%;
     margin-bottom: 10px;
+    background-color: #4e1a3d !important;
+    color: white;
+    width: 50%;
 }
+.toggle{
+    color: white;
+    background-color: #4e1a3d !important;
+}
+

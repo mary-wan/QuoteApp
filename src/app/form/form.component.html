@@ -1,6 +1,8 @@
 <div class="mt-3">
-  <form (ngSubmit)="submitQuote()" #goalForm='ngForm'>
-    <p class="text-center text-primary pt-1">Please Fill In All Fields To Post a Quote</p>
+  <p>Transform your life with the power of motivation.Stay inspired when reaching for new goals and dreams.</p>
+  <button class="toggle mb-2 btn-lg" (click)="this.formshow = !this.formshow">+ New Quote</button>
+  <form (ngSubmit)="submitQuote()" #goalForm='ngForm' *ngIf="formshow">
+    <p class="text-center text-danger pt-1">Please Fill In All Fields To Post a Quote</p>
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel'
@@ -25,12 +27,8 @@
         <p>Quote is required</p>
       </div>
     </div><br>
-    <button type="submit" class="btn btn-success center" [disabled]="goalForm.invalid">Add Quote</button>
+    <button type="submit" class="btn center" [disabled]="goalForm.invalid">Add Quote</button>
   </form>
   <hr>
-  <div class="display mt-2">
-    <p>Name: {{newQuote.name}}</p>
-    <p>Author: {{newQuote.author}}</p>
-    <p>"{{newQuote.quoteDescribe}}"</p>
-  </div>
+
 </div>
